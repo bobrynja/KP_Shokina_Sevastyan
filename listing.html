@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Игры и аксессуары — каталог с фильтрами — Брось кубик</title>
+<meta name="description" content="Каталог настольных игр и аксессуаров с фильтрами по категории, цене и количеству игроков.">
+<meta name="theme-color" content="#F5B81C">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;800&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page page--listing">
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="site-header">
+  <div class="site-header__topbar">
+    <div class="container site-header__topbar-inner">
+      <p class="site-header__note">Игровая зона бесплатна: попробуйте любую игру до покупки</p>
+      <ul class="site-header__contacts">
+        <li><a class="site-header__contact-link" href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+        <li><a class="site-header__contact-link" href="mailto:info@broskubik.ru">info@broskubik.ru</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container site-header__bar">
+    <a class="site-header__logo" href="index.html"><img class="site-header__logo-image" src="img/logo.png" alt="Брось кубик — на главную" width="144" height="44"></a>
+    <form class="site-search" action="listing.html" method="get" role="search">
+      <label class="visually-hidden" for="site-search-input">Поиск по каталогу</label>
+      <input class="site-search__input" id="site-search-input" type="search" name="q" placeholder="Найти игру или аксессуар" autocomplete="off">
+      <button class="site-search__button" type="submit">Найти</button>
+    </form>
+    <a class="btn btn--outline btn--small site-header__booking" href="contacts.html?topic=table#feedback">Забронировать стол</a>
+    <a class="cart-link" href="cart.html" aria-label="Корзина">
+      <svg class="cart-link__icon" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M3 5h4l3 14h14l3-10H8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="25" r="2.4" fill="currentColor"/><circle cx="22" cy="25" r="2.4" fill="currentColor"/></svg>
+      <span class="cart-link__label">Корзина</span>
+      <span class="cart-link__count" data-cart-count>0</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="nav-toggle__bars" aria-hidden="true"></span><span class="nav-toggle__text">Меню</span></button>
+  </div>
+  <nav class="main-nav" id="main-nav" aria-label="Основное меню">
+    <ul class="container main-nav__list">
+      <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="catalog.html" aria-current="page">Каталог</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="events.html">Афиша</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="delivery.html">Доставка и оплата</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="about.html">О нас</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="contacts.html">Контакты</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+<section class="page-head">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a></li><li class="breadcrumbs__item" aria-current="page">Все игры</li></ol></nav>
+    <h1 class="page-head__title">Игры и аксессуары</h1>
+    <p class="page-head__lead">Фильтруйте по категории, цене и числу игроков — результаты обновляются сразу.</p>
+  </div>
+</section>
+<div class="container listing">
+  <details class="filters" id="filters-panel" open>
+    <summary class="filters__summary">Фильтры</summary>
+    <form class="filters__form" id="filters-form" action="listing.html" method="get" aria-label="Фильтры каталога">
+      <div class="filters__header">
+        <h2 class="filters__title">Фильтры</h2>
+        <button class="filters__reset" type="button" id="filters-reset">Сбросить</button>
+      </div>
+      <div class="filters__group">
+        <label class="filters__label" for="filter-search">Поиск по названию</label>
+        <input class="input" id="filter-search" type="search" name="q" placeholder="Например, каркассон" autocomplete="off">
+      </div>
+      <fieldset class="filters__group">
+        <legend class="filters__label">Категория</legend>
+        <ul class="filters__options"><li class="filters__option"><label class="check"><input class="check__input" type="checkbox" name="cat" value="strategy"><span class="check__box" aria-hidden="true"></span><span class="check__label">Стратегии</span></label></li><li class="filters__option"><label class="check"><input class="check__input" type="checkbox" name="cat" value="family"><span class="check__box" aria-hidden="true"></span><span class="check__label">Семейные и детские</span></label></li><li class="filters__option"><label class="check"><input class="check__input" type="checkbox" name="cat" value="party"><span class="check__box" aria-hidden="true"></span><span class="check__label">Вечеринки</span></label></li><li class="filters__option"><label class="check"><input class="check__input" type="checkbox" name="cat" value="ccg"><span class="check__box" aria-hidden="true"></span><span class="check__label">ККИ и варгеймы</span></label></li><li class="filters__option"><label class="check"><input class="check__input" type="checkbox" name="cat" value="accessories"><span class="check__box" aria-hidden="true"></span><span class="check__label">Аксессуары</span></label></li></ul>
+      </fieldset>
+      <fieldset class="filters__group">
+        <legend class="filters__label">Цена, ₽</legend>
+        <div class="filters__range">
+          <label class="visually-hidden" for="price-min">Цена от</label>
+          <input class="input" id="price-min" type="number" name="min" min="0" step="100" inputmode="numeric" placeholder="От">
+          <label class="visually-hidden" for="price-max">Цена до</label>
+          <input class="input" id="price-max" type="number" name="max" min="0" step="100" inputmode="numeric" placeholder="До">
+        </div>
+      </fieldset>
+      <div class="filters__group">
+        <label class="filters__label" for="filter-players">Количество игроков</label>
+        <select class="input" id="filter-players" name="players">
+          <option value="">Любое</option>
+          <option value="1">1 игрок</option>
+          <option value="2">2 игрока</option>
+          <option value="3">3–4 игрока</option>
+          <option value="5">5 и более</option>
+        </select>
+      </div>
+      <div class="filters__group">
+        <label class="check"><input class="check__input" type="checkbox" id="filter-stock" name="stock" value="1"><span class="check__box" aria-hidden="true"></span><span class="check__label">Только в наличии</span></label>
+      </div>
+    </form>
+  </details>
+  <section class="catalog" aria-labelledby="catalog-title">
+    <h2 class="visually-hidden" id="catalog-title">Список товаров</h2>
+    <div class="catalog__bar">
+      <p class="catalog__count" id="catalog-count" aria-live="polite">Найдено: 10 товаров</p>
+      <div class="catalog__sort">
+        <label class="catalog__sort-label" for="sort-select">Сортировка</label>
+        <select class="input input--compact" id="sort-select" name="sort">
+          <option value="default">По умолчанию</option>
+          <option value="price-asc">Сначала дешевле</option>
+          <option value="price-desc">Сначала дороже</option>
+          <option value="title">По названию (А–Я)</option>
+        </select>
+      </div>
+    </div>
+    <ul class="product-grid product-grid--listing" id="product-grid">
+<li class="product-grid__item" data-slug="wingspan" data-title="крылья (wingspan)" data-category="strategy" data-price="4990" data-stock="in" data-order="0" data-players-min="1" data-players-max="5">
+  <article class="product-card">
+    <a class="product-card__media" href="product-wingspan.html" tabindex="-1" aria-hidden="true"><img class="product-card__image" src="img/wingspan.svg" alt="" width="800" height="600" loading="lazy"></a>
+    <span class="product-card__badge">Хит</span>
+    <div class="product-card__body">
+      <h3 class="product-card__title"><a class="product-card__link" href="product-wingspan.html">Крылья (Wingspan)</a></h3>
+      <p class="product-card__text">Красивая и глубокая игра про птиц: стройте заповедник и развивайте движок действий.</p>
+      <ul class="product-card__specs"><li class="product-card__spec"><span class="product-card__spec-name">Игроков</span><span class="product-card__spec-value">1–5</span></li><li class="product-card__spec"><span class="product-card__spec-name">Время</span><span class="product-card__spec-value">40–70 мин</span></li></ul>
+      <p class="product-card__stock product-card__stock--in">В наличии</p>
+      <div class="product-card__footer">
+        <p class="product-card__price">4 990 ₽</p>
+        <button class="btn btn--primary btn--small product-card__button" type="button" data-add-to-cart="wingspan">В корзину</button>
+      </div>
+    </div>
+  </article>
+</li>
+<li class="product-grid__item" data-slug="stone-age" data-title="каменный век (stone age)" data-category="strategy" data-price="2790" data-stock="in" data-order="1" data-players-min="2" data-players-max="4">
+  <article class="product-card">
+    <a class="product-card__media" href="product-stone-age.html" tabindex="-1" aria-hidden="true"><img class="product-card__image" src="img/stone-age.svg" alt="" width="800" height="600" loading="lazy"></a>
+    
+    <div class="product-card__body">
+      <h3 class="product-card__title"><a class="product-card__link" href="product-stone-age.html">Каменный век (Stone Age)</a></h3>
+      <p class="product-card__text">Классическая экономическая стратегия: добывайте ресурсы, стройте и развивайте племя.</p>
+      <ul class="product-card__specs"><li class="product-card__spec"><span class="product-card__spec-name">Игроков</span><span class="product-card__spec-value">2–4</span></li><li class="product-card__spec"><span class="product-card__spec-name">Время</span><span class="product-card__spec-value">60–90 мин</span></li></ul>
+      <p class="product-card__stock product-card__stock--in">В наличии</p>
+      <div class="product-card__footer">
+        <p class="product-card__price">2 790 ₽</p>
+        <button class="btn btn--primary btn--small product-card__button" type="button" data-add-to-cart="stone-age">В корзину</button>
+      </div>
+    </div>
+  </article>
+</li>
+<li class="product-grid__item" data-slug="carcassonne" data-title="каркассон (carcassonne)" data-category="family" data-price="1890" data-stock="in" data-order="2" data-players-min="2" data-players-max="5">
+  <article class="product-card">
+    <a class="product-card__media" href="product-carcassonne.html" tabindex="-1" aria-hidden="true"><img class="product-card__image" src="img/carcassonne.svg" alt="" width="800" height="600" loading="lazy"></a>
+    <span class="product-card__badge">Хит</span>
+    <div class="product-card__body">
+      <h3 class="product-card__title"><a class="product-card__link" href="product-carcassonne.html">Каркассон (Carcassonne)</a></h3>
+      <p class="product-card__text">Культовая игра в жанре тайл-плейсмент: выкладывайте плитки и стройте средневековый пейзаж.</p>
+      <ul class="product-card__specs"><li class="product-card__spec"><span class="product-card__spec-name">Игроков</span><span class="product-card__spec-value">2–5</span></li><li class="product-card__spec"><span class="product-card__spec-name">Время</span><span class="product-card__spec-value">30–45 мин</span></li></ul>
+      <p class="product-card__stock product-card__stock--in">В наличии</p>
+      <div class="product-card__footer">
+        <p class="product-card__price">1 890 ₽</p>
+        <button class="btn btn--primary btn--small product-card__button" type="button" data-add-to-cart="carcassonne">В корзину</button>
+      </div>
+    </div>
+  </article>
+</li>
+<li class="product-grid__item" data-slug="dobble" data-title="доббль (dobble)" data-category="family" data-price="990" data-stock="in" data-order="3" data-players-min="2" data-players-max="8">
+  <article class="product-card">
+    <a class="product-card__media" href="product-dobble.html" tabindex="-1" aria-hidden="true"><img class="product-card__image" src="img/dobble.svg" alt="" width="800" height="600" loading="lazy"></a>
+    
+    <div class="product-card__body">
+      <h3 class="product-card__title"><a class="product-card__link" href="product-dobble.html">Доббль (Dobble)</a></h3>
+      <p class="product-card__text">Игра на внимательность: найдите одинаковый символ на двух картах быстрее соперников.</p>
+      <ul class="product-card__specs"><li class="product-card__spec"><span class="product-card__spec-name">Игроков</span><span class="product-card__spec-value">2–8</span></li><li class="product-card__spec"><span class="product-card__spec-name">Время</span><span class="product-card__spec-value">15 мин</span></li></ul>
+      <p class="product-card__stock product-card__stock--in">В наличии</p>
+      <div class="product-card__footer">
+        <p class="product-card__price">990 ₽</p>
+        <button class="btn btn--primary btn--small product-card__button" type="button" data-add-to-cart="dobble">В корзину</button>
+      </div>
+    </div>
+  </article>
+</li>
+<li class="product-grid__item" data-slug="imaginarium" data-title="имаджинариум" data-category="party" data-price="2490" data-stock="in" data-order="4" data-players-min="3" data-players-max="98">
+  <article class="product-card">
+    <a class="product-card__media" href="product-imaginarium.html" tabindex="-1" aria-hidden="true"><img class="product-card__image" src="img/imaginarium.svg" alt="" width="800" height="600" loading="lazy"></a>
+    <span class="product-card__badge">Хит</span>
+    <div class="product-card__body">
+      <h3 class="product-card__title"><a class="product-card__link" href="product-imaginarium.html">Имаджинариум</a></h3>
+      <p class="product-card__text">Ассоциации по красивым иллюстрациям: загадывайте так, чтобы поняли не все.</p>
+      <ul class="product-card__specs"><li class="product-card__spec"><span class="product-card__spec-name">Игроков</span><span class="product-card__spec-value">от 3</span></li><li class="product-card__spec"><span class="product-card__spec-name">Время</span><span class="product-card__spec-value">30–60 мин</span></li></ul>
+      <p class="product-card__stock product-card__stock--in">В наличии</p>
+      <div class="product-card__footer">
+        <p class="product-card__price">2 490 ₽</p>
+        <button class="btn btn--primary btn--small product-card__button" type="button" data-add-to-cart="imaginarium">В корзину</button>
+      </div>
+    </div>
+  </article>
+</li>
+<li class="product-grid__item" data-slug="exploding-kittens" data-title="взрывные котята (exploding kittens)" data-category="party" data-price="1590" data-stock="in" data-order="5" data-players-min="2" data-players-max="5">
+  <article class="product-card">
+    <a class="product-card__media" href="product-exploding-kittens.html" tabindex="-1" aria-hidden="true"><img class="product-card__image" src="img/exploding-kittens.svg" alt="" width="800" height="600" loading="lazy"></a>
+    <span class="product-card__badge">Хит</span>
+    <div class="product-card__body">
+      <h3 class="product-card__title"><a class="product-card__link" href="product-exploding-kittens.html">Взрывные котята (Exploding Kittens)</a></h3>
+      <p class="product-card__text">Динамичная карточная игра с юмором: не вытяните карту с взрывным котёнком.</p>
+      <ul class="product-card__specs"><li class="product-card__spec"><span class="product-card__spec-name">Игроков</span><span class="product-card__spec-value">2–5</span></li><li class="product-card__spec"><span class="product-card__spec-name">Время</span><span class="product-card__spec-value">15 мин</span></li></ul>
+      <p class="product-card__stock product-card__stock--in">В наличии</p>
+      <div class="product-card__footer">
+        <p class="product-card__price">1 590 ₽</p>
+        <button class="btn btn--primary btn--small product-card__button" type="button" data-add-to-cart="exploding-kittens">В корзину</button>
+      </div>
+    </div>
+  </article>
+</li>
+<li class="product-grid__item" data-slug="mtg-starter" data-title="magic: the gathering — starter kit" data-category="ccg" data-price="1990" data-stock="in" data-order="6" data-players-min="2" data-players-max="2">
+  <article class="product-card">
+    <a class="product-card__media" href="product-mtg-starter.html" tabindex="-1" aria-hidden="true"><img class="product-card__image" src="img/mtg-starter.svg" alt="" width="800" height="600" loading="lazy"></a>
+    
+    <div class="product-card__body">
+      <h3 class="product-card__title"><a class="product-card__link" href="product-mtg-starter.html">Magic: The Gathering — Starter Kit</a></h3>
+      <p class="product-card__text">Стартовый набор с готовыми колодами для двоих: откройте коробку и начните играть.</p>
+      <ul class="product-card__specs"><li class="product-card__spec"><span class="product-card__spec-name">Игроков</span><span class="product-card__spec-value">2</span></li><li class="product-card__spec"><span class="product-card__spec-name">Состав</span><span class="product-card__spec-value">2 колоды</span></li></ul>
+      <p class="product-card__stock product-card__stock--in">В наличии</p>
+      <div class="product-card__footer">
+        <p class="product-card__price">1 990 ₽</p>
+        <button class="btn btn--primary btn--small product-card__button" type="button" data-add-to-cart="mtg-starter">В корзину</button>
+      </div>
+    </div>
+  </article>
+</li>
+<li class="product-grid__item" data-slug="warhammer-starter" data-title="warhammer 40,000 — командный стартер" data-category="ccg" data-price="6990" data-stock="order" data-order="7" data-players-min="2" data-players-max="2">
+  <article class="product-card">
+    <a class="product-card__media" href="product-warhammer-starter.html" tabindex="-1" aria-hidden="true"><img class="product-card__image" src="img/warhammer-starter.svg" alt="" width="800" height="600" loading="lazy"></a>
+    <span class="product-card__badge">Под заказ</span>
+    <div class="product-card__body">
+      <h3 class="product-card__title"><a class="product-card__link" href="product-warhammer-starter.html">Warhammer 40,000 — командный стартер</a></h3>
+      <p class="product-card__text">Стартовый набор миниатюр для знакомства с варгеймом: соберите и раскрасьте свою армию.</p>
+      <ul class="product-card__specs"><li class="product-card__spec"><span class="product-card__spec-name">Игроков</span><span class="product-card__spec-value">2</span></li><li class="product-card__spec"><span class="product-card__spec-name">Тип</span><span class="product-card__spec-value">Варгейм</span></li></ul>
+      <p class="product-card__stock product-card__stock--order">Под заказ, 3–5 дней</p>
+      <div class="product-card__footer">
+        <p class="product-card__price">6 990 ₽</p>
+        <button class="btn btn--primary btn--small product-card__button" type="button" data-add-to-cart="warhammer-starter">В корзину</button>
+      </div>
+    </div>
+  </article>
+</li>
+<li class="product-grid__item" data-slug="metal-dice" data-title="набор металлических дайсов (d20, d12, d10, d8, d6, d4)" data-category="accessories" data-price="1290" data-stock="in" data-order="8">
+  <article class="product-card">
+    <a class="product-card__media" href="product-metal-dice.html" tabindex="-1" aria-hidden="true"><img class="product-card__image" src="img/metal-dice.svg" alt="" width="800" height="600" loading="lazy"></a>
+    
+    <div class="product-card__body">
+      <h3 class="product-card__title"><a class="product-card__link" href="product-metal-dice.html">Набор металлических дайсов (d20, d12, d10, d8, d6, d4)</a></h3>
+      <p class="product-card__text">Шесть металлических кубиков с гравировкой для D&amp;D и других ролевых игр.</p>
+      <ul class="product-card__specs"><li class="product-card__spec"><span class="product-card__spec-name">Материал</span><span class="product-card__spec-value">Металл</span></li><li class="product-card__spec"><span class="product-card__spec-name">Комплект</span><span class="product-card__spec-value">6 дайсов</span></li></ul>
+      <p class="product-card__stock product-card__stock--in">В наличии</p>
+      <div class="product-card__footer">
+        <p class="product-card__price">1 290 ₽</p>
+        <button class="btn btn--primary btn--small product-card__button" type="button" data-add-to-cart="metal-dice">В корзину</button>
+      </div>
+    </div>
+  </article>
+</li>
+<li class="product-grid__item" data-slug="box-organizer" data-title="органайзер-вставка для коробки" data-category="accessories" data-price="1490" data-stock="in" data-order="9">
+  <article class="product-card">
+    <a class="product-card__media" href="product-box-organizer.html" tabindex="-1" aria-hidden="true"><img class="product-card__image" src="img/box-organizer.svg" alt="" width="800" height="600" loading="lazy"></a>
+    
+    <div class="product-card__body">
+      <h3 class="product-card__title"><a class="product-card__link" href="product-box-organizer.html">Органайзер-вставка для коробки</a></h3>
+      <p class="product-card__text">Вставка с отсеками: компоненты лежат по местам, а коробка не превращается в кучу.</p>
+      <ul class="product-card__specs"><li class="product-card__spec"><span class="product-card__spec-name">Материал</span><span class="product-card__spec-value">Вспененный полимер</span></li><li class="product-card__spec"><span class="product-card__spec-name">Сборка</span><span class="product-card__spec-value">Без клея</span></li></ul>
+      <p class="product-card__stock product-card__stock--in">В наличии</p>
+      <div class="product-card__footer">
+        <p class="product-card__price">1 490 ₽</p>
+        <button class="btn btn--primary btn--small product-card__button" type="button" data-add-to-cart="box-organizer">В корзину</button>
+      </div>
+    </div>
+  </article>
+</li>
+    </ul>
+    <div class="catalog__empty" id="catalog-empty" hidden>
+      <p class="catalog__empty-title">Ничего не нашлось</p>
+      <p class="catalog__empty-text">Попробуйте изменить условия поиска или сбросить фильтры.</p>
+      <button class="btn btn--primary" type="button" id="catalog-empty-reset">Сбросить фильтры</button>
+    </div>
+  </section>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <a class="site-footer__logo" href="index.html"><img src="img/logo-light.png" alt="Брось кубик" width="144" height="44" loading="lazy"></a>
+      <p class="site-footer__about">Магазин настольных игр во Владимире. Играем вместе с 2018 года.</p>
+    </div>
+    <nav class="site-footer__col" aria-labelledby="footer-catalog">
+      <h2 class="site-footer__title" id="footer-catalog">Каталог</h2>
+      <ul class="site-footer__list"><li><a class="site-footer__link" href="listing.html?cat=strategy">Стратегии</a></li><li><a class="site-footer__link" href="listing.html?cat=family">Семейные и детские</a></li><li><a class="site-footer__link" href="listing.html?cat=party">Вечеринки</a></li><li><a class="site-footer__link" href="listing.html?cat=ccg">ККИ и варгеймы</a></li><li><a class="site-footer__link" href="listing.html?cat=accessories">Аксессуары</a></li></ul>
+    </nav>
+    <nav class="site-footer__col" aria-labelledby="footer-shop">
+      <h2 class="site-footer__title" id="footer-shop">Магазин</h2>
+      <ul class="site-footer__list"><li><a class="site-footer__link" href="catalog.html">Каталог</a></li><li><a class="site-footer__link" href="events.html">Афиша</a></li><li><a class="site-footer__link" href="delivery.html">Доставка и оплата</a></li><li><a class="site-footer__link" href="about.html">О нас</a></li><li><a class="site-footer__link" href="contacts.html">Контакты</a></li><li><a class="site-footer__link" href="cart.html">Корзина</a></li></ul>
+    </nav>
+    <div class="site-footer__col">
+      <h2 class="site-footer__title">Контакты</h2>
+      <address class="site-footer__address">
+        <p class="site-footer__text">г. Владимир, ул. Тракторная, д. 20</p>
+        <p class="site-footer__text"><a class="site-footer__link" href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+        <p class="site-footer__text"><a class="site-footer__link" href="mailto:info@broskubik.ru">info@broskubik.ru</a></p>
+        <p class="site-footer__text">Пн–Вс с 11:00 до 22:00</p>
+      </address>
+    </div>
+    <div class="site-footer__col">
+      <h2 class="site-footer__title">Мы в соцсетях</h2>
+      <ul class="site-footer__social">
+        <li><a class="social-link" href="https://vk.com/broskubik" target="_blank" rel="noopener noreferrer">ВКонтакте</a></li>
+        <li><a class="social-link" href="https://t.me/broskubik_news" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container site-footer__bottom">
+    <p class="site-footer__copy">© 2026 ООО «Брось кубик». Все права защищены.</p>
+    <p class="site-footer__copy">Разработчики: Шокина А. Н., Севастьян М. И. (гр. ПИ-124)</p>
+  </div>
+</footer>
+<div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
+<script src="js/data.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/listing.js" defer></script>
+</body>
+</html>

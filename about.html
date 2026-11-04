@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>О нас — Брось кубик</title>
+<meta name="description" content="История, миссия и преимущества магазина настольных игр «Брось кубик» во Владимире.">
+<meta name="theme-color" content="#F5B81C">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;800&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page page--about">
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="site-header">
+  <div class="site-header__topbar">
+    <div class="container site-header__topbar-inner">
+      <p class="site-header__note">Игровая зона бесплатна: попробуйте любую игру до покупки</p>
+      <ul class="site-header__contacts">
+        <li><a class="site-header__contact-link" href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+        <li><a class="site-header__contact-link" href="mailto:info@broskubik.ru">info@broskubik.ru</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container site-header__bar">
+    <a class="site-header__logo" href="index.html"><img class="site-header__logo-image" src="img/logo.png" alt="Брось кубик — на главную" width="144" height="44"></a>
+    <form class="site-search" action="listing.html" method="get" role="search">
+      <label class="visually-hidden" for="site-search-input">Поиск по каталогу</label>
+      <input class="site-search__input" id="site-search-input" type="search" name="q" placeholder="Найти игру или аксессуар" autocomplete="off">
+      <button class="site-search__button" type="submit">Найти</button>
+    </form>
+    <a class="btn btn--outline btn--small site-header__booking" href="contacts.html?topic=table#feedback">Забронировать стол</a>
+    <a class="cart-link" href="cart.html" aria-label="Корзина">
+      <svg class="cart-link__icon" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M3 5h4l3 14h14l3-10H8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="25" r="2.4" fill="currentColor"/><circle cx="22" cy="25" r="2.4" fill="currentColor"/></svg>
+      <span class="cart-link__label">Корзина</span>
+      <span class="cart-link__count" data-cart-count>0</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="nav-toggle__bars" aria-hidden="true"></span><span class="nav-toggle__text">Меню</span></button>
+  </div>
+  <nav class="main-nav" id="main-nav" aria-label="Основное меню">
+    <ul class="container main-nav__list">
+      <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="events.html">Афиша</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="delivery.html">Доставка и оплата</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="about.html" aria-current="page">О нас</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="contacts.html">Контакты</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+<section class="page-head">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки"><ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li><li class="breadcrumbs__item" aria-current="page">О нас</li></ol></nav>
+    <h1 class="page-head__title">О магазине «Брось кубик»</h1>
+  </div>
+</section>
+<div class="container info">
+  <nav class="info-nav" aria-label="Информация"><h2 class="info-nav__title">Информация</h2><ul class="info-nav__list"><li class="info-nav__item"><a class="info-nav__link" href="about.html" aria-current="page">О нас</a></li><li class="info-nav__item"><a class="info-nav__link" href="delivery.html">Доставка и оплата</a></li><li class="info-nav__item"><a class="info-nav__link" href="events.html">Афиша</a></li><li class="info-nav__item"><a class="info-nav__link" href="contacts.html">Контакты</a></li></ul></nav>
+  <div class="info__content">
+    <img class="info__banner" src="img/table.svg" alt="Игровой стол с кубиками и картами" width="640" height="560">
+    <p class="info__lead">Мы работаем с 2018 года. Начинали как небольшой магазинчик, а сегодня — крупнейшая локальная точка настольных игр во Владимире: с просторной игровой зоной, мастер-классами и турнирами.</p>
+    <blockquote class="mission"><p class="mission__text">Объединять людей за одним столом, даря эмоции и живое общение в эпоху цифровизации.</p><footer class="mission__caption">Наша миссия</footer></blockquote>
+    <h2 class="info__title">Что нас отличает</h2>
+    <ul class="traits">
+      <li class="traits__item"><h3 class="traits__title">Тестирование перед покупкой</h3><p class="traits__text">Любую игру из каталога можно бесплатно опробовать за столом в игровой зоне и убедиться, что она подходит именно вам.</p></li>
+      <li class="traits__item"><h3 class="traits__title">Бесплатное обучение</h3><p class="traits__text">Еженедельно проводим мастер-классы по новинкам и сложным играм. Наши сотрудники объяснят правила за 15 минут.</p></li>
+      <li class="traits__item"><h3 class="traits__title">Турниры и клуб</h3><p class="traits__text">Регулярные турниры с призовым фондом создают вокруг магазина сообщество, где можно найти друзей и соперников.</p></li>
+      <li class="traits__item"><h3 class="traits__title">Экспертный подбор</h3><p class="traits__text">Подскажем игру для вечеринки, семейного вечера или серьёзной стратегии и расскажем, какие аксессуары действительно нужны.</p></li>
+    </ul>
+    <h2 class="info__title">Наш путь</h2>
+    <ol class="timeline">
+      <li class="timeline__item"><p class="timeline__year">2018</p><p class="timeline__text">Открыли небольшой магазин настольных игр.</p></li>
+      <li class="timeline__item"><p class="timeline__year">Дальше</p><p class="timeline__text">Появились игровая зона, мастер-классы и турниры.</p></li>
+      <li class="timeline__item"><p class="timeline__year">2026</p><p class="timeline__text">Отмечаем 8 лет и остаёмся крупнейшей локальной точкой во Владимире.</p></li>
+    </ol>
+    <div class="info__cta">
+      <h2 class="info__cta-title">Приходите в гости</h2>
+      <p class="info__cta-text">г. Владимир, ул. Тракторная, д. 20. Ежедневно с 11:00 до 22:00.</p>
+      <div class="info__cta-actions"><a class="btn btn--primary" href="contacts.html">Контакты</a><a class="btn btn--outline" href="contacts.html?topic=table#feedback">Забронировать стол</a></div>
+    </div>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <a class="site-footer__logo" href="index.html"><img src="img/logo-light.png" alt="Брось кубик" width="144" height="44" loading="lazy"></a>
+      <p class="site-footer__about">Магазин настольных игр во Владимире. Играем вместе с 2018 года.</p>
+    </div>
+    <nav class="site-footer__col" aria-labelledby="footer-catalog">
+      <h2 class="site-footer__title" id="footer-catalog">Каталог</h2>
+      <ul class="site-footer__list"><li><a class="site-footer__link" href="listing.html?cat=strategy">Стратегии</a></li><li><a class="site-footer__link" href="listing.html?cat=family">Семейные и детские</a></li><li><a class="site-footer__link" href="listing.html?cat=party">Вечеринки</a></li><li><a class="site-footer__link" href="listing.html?cat=ccg">ККИ и варгеймы</a></li><li><a class="site-footer__link" href="listing.html?cat=accessories">Аксессуары</a></li></ul>
+    </nav>
+    <nav class="site-footer__col" aria-labelledby="footer-shop">
+      <h2 class="site-footer__title" id="footer-shop">Магазин</h2>
+      <ul class="site-footer__list"><li><a class="site-footer__link" href="catalog.html">Каталог</a></li><li><a class="site-footer__link" href="events.html">Афиша</a></li><li><a class="site-footer__link" href="delivery.html">Доставка и оплата</a></li><li><a class="site-footer__link" href="about.html">О нас</a></li><li><a class="site-footer__link" href="contacts.html">Контакты</a></li><li><a class="site-footer__link" href="cart.html">Корзина</a></li></ul>
+    </nav>
+    <div class="site-footer__col">
+      <h2 class="site-footer__title">Контакты</h2>
+      <address class="site-footer__address">
+        <p class="site-footer__text">г. Владимир, ул. Тракторная, д. 20</p>
+        <p class="site-footer__text"><a class="site-footer__link" href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+        <p class="site-footer__text"><a class="site-footer__link" href="mailto:info@broskubik.ru">info@broskubik.ru</a></p>
+        <p class="site-footer__text">Пн–Вс с 11:00 до 22:00</p>
+      </address>
+    </div>
+    <div class="site-footer__col">
+      <h2 class="site-footer__title">Мы в соцсетях</h2>
+      <ul class="site-footer__social">
+        <li><a class="social-link" href="https://vk.com/broskubik" target="_blank" rel="noopener noreferrer">ВКонтакте</a></li>
+        <li><a class="social-link" href="https://t.me/broskubik_news" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container site-footer__bottom">
+    <p class="site-footer__copy">© 2026 ООО «Брось кубик». Все права защищены.</p>
+    <p class="site-footer__copy">Разработчики: Шокина А. Н., Севастьян М. И. (гр. ПИ-124)</p>
+  </div>
+</footer>
+<div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
+<script src="js/data.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
